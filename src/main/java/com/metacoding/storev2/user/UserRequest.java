@@ -11,7 +11,8 @@ public class UserRequest {
 
     @Data
     public static class LoginDTO{
-        private Integer username;
+        private String username;
+        private String password;
     }
 
 }
