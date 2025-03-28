@@ -18,7 +18,7 @@ public class ViewCheckController {
 
     @GetMapping("/t3")
     public String t3() {
-        return "user/login-form";
+        return "login-form.mustache";
     }
 
     @GetMapping("/t4")
