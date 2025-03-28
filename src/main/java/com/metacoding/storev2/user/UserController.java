@@ -14,7 +14,7 @@ public class UserController {
 
     @GetMapping("/")
     public String main() {
-        return "layout/header";
+        return "/home";
     }
 
     @GetMapping("/join-form")
@@ -27,7 +27,6 @@ public class UserController {
         userService.회원가입(joinDTO);
         return "redirect:/login-form";
     }
-
     @GetMapping("/login-form")
     public String loginForm() {
         return "user/login-form";
@@ -37,7 +36,11 @@ public class UserController {
     public String login(UserRequest.LoginDTO loginDTO) {
         User sessionUser = userService.로그인(loginDTO);
         session.setAttribute("sessionUser", sessionUser);
-        System.out.println("sessionUser = " + sessionUser);
+//        System.out.println("sessionUser = " + sessionUser);
         return "redirect:/";
+    }
+    @GetMapping("/productList")
+    public String productList() {
+        return "store/list";
     }
 }

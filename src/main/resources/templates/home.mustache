@@ -4,7 +4,13 @@
     <div class="mt-4 p-5 bg-light text-dark rounded-4">
         <h1>가게에 오신것을 환영합니다.</h1>
         <h3 class="mt-3">
-            쌀님
+           {{#sessionUser}}
+               <h3 class="mt-3">{{username}}님을 위한 신선한 식재료가 준비되어 있습니다.^^</h3>
+           {{/sessionUser}}
+           {{^sessionUser}}
+               <h3 class="mt-3">오늘도 건강한 하루 보내셔야죠!</h3>
+           {{/sessionUser}}
+
         </h3>
     </div>
 </div>
