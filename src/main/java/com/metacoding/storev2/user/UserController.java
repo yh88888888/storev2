@@ -27,6 +27,7 @@ public class UserController {
         userService.회원가입(joinDTO);
         return "redirect:/login-form";
     }
+
     @GetMapping("/login-form")
     public String loginForm() {
         return "user/login-form";
@@ -39,8 +40,10 @@ public class UserController {
 //        System.out.println("sessionUser = " + sessionUser);
         return "redirect:/";
     }
-    @GetMapping("/productList")
-    public String productList() {
-        return "store/list";
+
+    @GetMapping("/logout")
+    public String logout() {
+        session.invalidate();
+        return "redirect:/";
     }
 }
