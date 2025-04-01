@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.sql.SQLType;
+
 @NoArgsConstructor
 @Getter
 @Table(name = "store_tb")
@@ -16,4 +18,8 @@ public class Store {
     private String name;
     private Integer stock;
     private Integer price;
+
+    public void 재고감소(int qty) {
+        this.stock = this.stock - qty;
+    }
 }

@@ -1,5 +1,6 @@
 insert into store_tb(name, stock, price) values('바나나', 40, 3000);
 insert into store_tb(name, stock, price) values('딸기', 45, 2000);
+insert into store_tb(name, stock, price) values('초콜렛', 100, 10000);
 
 insert into user_tb(username, password, fullname, created_at) values ('ssar', '1234', '쌀', now());
 insert into user_tb(username, password, fullname, created_at) values ('cos', '1234', '코스', now());
